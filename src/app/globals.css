@@ -1,28 +1,42 @@
 @import "tailwindcss";
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap'); */
 
-@theme {
+:root{
   --color-primary: #222222; /* Charcoal Gray */
   --color-secondary: #E5E5E5; /* Light Gray */
   --color-dark: #4A4A4A; /* Dark Slate Gray */
   --color-light: #B0B0B0; /* Silver Gray */
   --color-accent: #7A7A7A; /* Medium Gray */
+
+  /* Fonts */
   --font-inter: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-roboto: Roboto, ui-sans-serif, system-ui, sans-serif;
   --font-poppins: Poppins, ui-sans-serif, system-ui, sans-serif;
 }
 
-@layer base {
-  :root {
-    --background: var(--color-primary);
-    --foreground: var(--color-dark);
-  }
-}
 
 body {
-  @apply bg-primary text-dark font-roboto;
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  font-family: var(--font-poppins);
 }
 
+/* Utily classes */
+.sfg__bg-light {
+  background-color: var(--color-secondary);
+}
+.sfg__bg-dark {
+  background-color: var(--color-primary);
+}
+.sfg__text-light {
+  color: var(--color-light);
+}
+.sfg__text-dark {
+ color: var(--color-dark);
+}
+.sfg__text-accent {
+  color: var(--color-accent);
+}
 .font-inter {
   font-family: var(--font-inter);
 }

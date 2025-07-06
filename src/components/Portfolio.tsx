@@ -6,7 +6,7 @@ export default function Portfolio({ items }: { items: { id: number; title: strin
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item) => (
             <div key={item.id} className="bg-primary rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+              <img src={`/images/portfolio/${item.image}`} alt={item.title} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="font-inter text-xl font-bold mb-2">{item.title}</h3>
                 <p className="font-roboto text-light">{item.description}</p>

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="bg-secondary text-dark py-20 px-6 md:px-12 flex items-center justify-center min-h-screen">
+    <section className="sfg__text-dark py-20 px-6 md:px-12 flex items-center justify-center min-h-screen">
       <div className="max-w-3xl text-center">
         <h1 className="font-inter text-4xl md:text-6xl font-bold mb-4">Welcome to SFG Web</h1>
         <p className="font-roboto text-lg md:text-xl mb-8 text-light">

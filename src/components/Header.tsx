@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,10 +24,15 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-primary text-light sticky top-0 z-50 py-4 px-6 md:px-12">
+    <header className="sfg__bg-dark sfg__text-light sticky top-0 z-50 py-4 px-6 md:px-12">
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href="/" className="font-inter text-2xl font-bold">
-          SFG Web
+          <Image 
+            src="/temp_logo.svg"
+            width={80}
+            height={80}
+            alt="SFG WEB Logo"
+          />
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
@@ -95,7 +101,7 @@ export default function Header() {
       {/* Overlay for Mobile Menu */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-primary/50 z-40 md:hidden"
+          className="fixed inset-0 sfg__bg-dark sfg__text-light  z-40 md:hidden"
           onClick={toggleMenu}
         />
       )}
